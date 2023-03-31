@@ -17,7 +17,7 @@ describe('utils:sortAlphabetically', () => {
 
   it('returns null if data format is invalid', () => {
     invalidDataFormat.map((value) => {
-      const invalidResult = sortAlphabetically(value);
+      const invalidResult = sortAlphabetically(value as any[]);
       expect(invalidResult).toEqual(null);
     });
   });
